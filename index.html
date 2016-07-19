@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adopt a protocol</title>
+    <link href="main.css" rel="stylesheet"></link>
+    <script>
+      window.onload = function() {
+        var form = document.getElementById('submit_form');
+        var protocol = document.getElementById('form-protocol');
+        var name = document.getElementById('form-name');
+        var email = document.getElementById('form-email');
+
+        form.addEventListener('submit', function(ev) {
+          ev.preventDefault();
+
+          var subject = 'proto.care: ' + protocol.value;
+          var body = 'Hello, my name is '+ name.value + ' <'+ email.value +'>\n\n\
+            and I would totes like to adopt '+ protocol.value +'.\n\n\
+            Cheers, \n\
+            '+ name.value;
+
+          var url = 'mailto:protocare@igor.io';
+          url += '?subject='+ escape(subject);
+          url += '&body=' + escape(body);
+
+          window.location = url;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="inner">
+          <h1>Adopt a Protocol</h1>
+          <h2>A remote conf about network protocols!</h2>
+          <h3>date tbd</h3>
+        </div>
+      </header>
+      <main>
+        <div class="inner">
+
+          <section>
+            <h2>What is this even?</h2>
+            <p>When you turn on your computer  And  go to www.google.com a lot of stuff happens before you get to see the google search bar.<p>
+            <p>there are many layers of protocols that make the internet work! and also many protocols that used to be popular in the 90s but now not so much anymore but they're still super interesting!</p
+
+            <p>we want you to adopt a protocol! pick one you want to learn about and prepare a 15-minute talk!</p>
+          </section>
+
+          <section>
+            <h2>Call for protoposals</h2>
+
+            <form method="POST" action="#" id="submit_form">
+              <legend>Submit your protoposal</legend>
+
+              <label for="form-protocol">Protocol</label>
+              <input type="text" name="protocol-name" id="form-protocol" placeholder="protocol name" required>
+
+              <label for="form-name">Name</label>
+              <input type="text" name="your-name" id="form-name" placeholder="your name" required>
+
+              <label for="form-email">Email</label>
+              <input type="email" name="your-email" id="form-email" placeholder="your email" required>
+
+              <input type="submit" id="form-submit" value="propose!">
+
+            </form>
+          </section>
+
+          <section>
+            <h2>Location</h2>
+            <p>somewhere on the internet! (google hangouts)</p>
+          </section>
+
+          <section>
+            <h2>Code of Conduct</h2>
+            <p>while this is a remote event, we expect attendees and speakers to adhere to the <a href="http://berlincodeofconduct.org/" title="Berlin CoC">berlin code of conduct</a>.</p>
+            <p>if you encounter someone violating the code of conduct, please contact either <a href="mailto:mail@lislis.de">lisa</a> or <a href="mailto:igor@igor.io" title="Email Igor">igor</a>.</p>
+          </section>
+
+          <section>
+            <h2>#hashtag</h2>
+            <p>the official #hashtag for this event is #protocare.</p>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <div class="inner">
+          <p>~ brought to you with lots of :love: from lisa and igor ~</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
