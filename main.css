@@ -1,3 +1,10 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
 hmtl, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
@@ -8,6 +15,67 @@ hmtl, body {
     background-size: contain;
 }
 
+h1, h2, h3, h4 {
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: .2em;
+    font-size: 70px;
+}
+
+header {
+    margin-bottom: 5em;
+}
+
+header h2 {
+    font-style: italic;
+}
+
+section h2 {
+    margin-top: 2em;
+    font-size: 30px;
+}
+
+footer {
+    margin: 7em 0;
+    text-align: center;
+}
+
+label,
+input {
+    display: block;
+}
+
+label {
+    margin: 1em 0 .2em;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    font-size: inherit;
+    padding: .3em .5em;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: hotpink;
+    font-size: inherit;
+    padding: .4em .6em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-top: 2em;
+}
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: purple;
+}
+
 
 .inner {
 
@@ -16,12 +84,15 @@ hmtl, body {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 
     .inner {
-        width: 800px;
+        width: 600px;
         margin: auto;
     }
-
-
+    
+    form {
+        width: 350px;
+        margin: auto;
+    }
 }
