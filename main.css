@@ -9,10 +9,33 @@ hmtl, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     line-height: 1.5;
-    color: #222;
-    background-color: #fff;
-    /*background-image: url(taylor.gif);*/
+    color: #ccc;
+    background-color: hsla(180, 40%, 30%, 1);
+    background-image: url(taylor.gif);
     background-size: contain;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    animation: colorAttack infinite 4s linear;
+    animation-direction: alternate;
+}
+
+@keyframes colorAttack {
+
+    0% {
+        background-color: hsla(170, 40%, 30%, 1);
+    }
+
+    100% {
+        background-color: hsla(200, 60%, 30%, 1);
+    }
+}
+
+a {
+    color: white;
+}
+
+.wrapper {
+    background-color: hsla(60, 80, 50, 0.8);
 }
 
 h1, h2, h3, h4 {
@@ -63,17 +86,18 @@ input[type="email"] {
 
 input[type="submit"] {
     border: none;
-    background-color: hotpink;
+    background-color: white;
     font-size: inherit;
     padding: .4em .6em;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
+    color: #222;
     margin-top: 2em;
 }
 input[type="submit"]:hover,
 input[type="submit"]:active {
-    background-color: purple;
+    background-color: teal;
+    color: white;
 }
 
 
